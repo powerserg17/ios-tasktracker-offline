@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2C2B2331E53E8AB009F0245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B2321E53E8AB009F0245 /* AppDelegate.swift */; };
+		F2C2B2351E53E8AB009F0245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B2341E53E8AB009F0245 /* ViewController.swift */; };
+		F2C2B2381E53E8AB009F0245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C2B2361E53E8AB009F0245 /* Main.storyboard */; };
+		F2C2B23B1E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B2391E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodeld */; };
+		F2C2B23D1E53E8AB009F0245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C2B23C1E53E8AB009F0245 /* Assets.xcassets */; };
+		F2C2B2401E53E8AB009F0245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C2B23E1E53E8AB009F0245 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F2C2B22F1E53E8AB009F0245 /* TaskTracker Offline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TaskTracker Offline.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C2B2321E53E8AB009F0245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2C2B2341E53E8AB009F0245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2C2B2371E53E8AB009F0245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2C2B23A1E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskTracker_Offline.xcdatamodel; sourceTree = "<group>"; };
+		F2C2B23C1E53E8AB009F0245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2C2B23F1E53E8AB009F0245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2C2B2411E53E8AB009F0245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2C2B22C1E53E8AA009F0245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2C2B2261E53E8AA009F0245 = {
+			isa = PBXGroup;
+			children = (
+				F2C2B2311E53E8AB009F0245 /* TaskTracker Offline */,
+				F2C2B2301E53E8AB009F0245 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2C2B2301E53E8AB009F0245 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2C2B22F1E53E8AB009F0245 /* TaskTracker Offline.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2C2B2311E53E8AB009F0245 /* TaskTracker Offline */ = {
+			isa = PBXGroup;
+			children = (
+				F2C2B2321E53E8AB009F0245 /* AppDelegate.swift */,
+				F2C2B2341E53E8AB009F0245 /* ViewController.swift */,
+				F2C2B2361E53E8AB009F0245 /* Main.storyboard */,
+				F2C2B23C1E53E8AB009F0245 /* Assets.xcassets */,
+				F2C2B23E1E53E8AB009F0245 /* LaunchScreen.storyboard */,
+				F2C2B2411E53E8AB009F0245 /* Info.plist */,
+				F2C2B2391E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodeld */,
+			);
+			path = "TaskTracker Offline";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2C2B22E1E53E8AA009F0245 /* TaskTracker Offline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2C2B2441E53E8AB009F0245 /* Build configuration list for PBXNativeTarget "TaskTracker Offline" */;
+			buildPhases = (
+				F2C2B22B1E53E8AA009F0245 /* Sources */,
+				F2C2B22C1E53E8AA009F0245 /* Frameworks */,
+				F2C2B22D1E53E8AA009F0245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TaskTracker Offline";
+			productName = "TaskTracker Offline";
+			productReference = F2C2B22F1E53E8AB009F0245 /* TaskTracker Offline.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2C2B2271E53E8AA009F0245 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Serhii Pianykh";
+				TargetAttributes = {
+					F2C2B22E1E53E8AA009F0245 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2BULHRS882;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F2C2B22A1E53E8AA009F0245 /* Build configuration list for PBXProject "TaskTracker Offline" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2C2B2261E53E8AA009F0245;
+			productRefGroup = F2C2B2301E53E8AB009F0245 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2C2B22E1E53E8AA009F0245 /* TaskTracker Offline */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2C2B22D1E53E8AA009F0245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2C2B2401E53E8AB009F0245 /* LaunchScreen.storyboard in Resources */,
+				F2C2B23D1E53E8AB009F0245 /* Assets.xcassets in Resources */,
+				F2C2B2381E53E8AB009F0245 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2C2B22B1E53E8AA009F0245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2C2B2351E53E8AB009F0245 /* ViewController.swift in Sources */,
+				F2C2B2331E53E8AB009F0245 /* AppDelegate.swift in Sources */,
+				F2C2B23B1E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F2C2B2361E53E8AB009F0245 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2C2B2371E53E8AB009F0245 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2C2B23E1E53E8AB009F0245 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2C2B23F1E53E8AB009F0245 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2C2B2421E53E8AB009F0245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2C2B2431E53E8AB009F0245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2C2B2451E53E8AB009F0245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2BULHRS882;
+				INFOPLIST_FILE = "TaskTracker Offline/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "serhii.pianykh.TaskTracker-Offline";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F2C2B2461E53E8AB009F0245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2BULHRS882;
+				INFOPLIST_FILE = "TaskTracker Offline/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "serhii.pianykh.TaskTracker-Offline";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2C2B22A1E53E8AA009F0245 /* Build configuration list for PBXProject "TaskTracker Offline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2C2B2421E53E8AB009F0245 /* Debug */,
+				F2C2B2431E53E8AB009F0245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2C2B2441E53E8AB009F0245 /* Build configuration list for PBXNativeTarget "TaskTracker Offline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2C2B2451E53E8AB009F0245 /* Debug */,
+				F2C2B2461E53E8AB009F0245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F2C2B2391E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F2C2B23A1E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodel */,
+			);
+			currentVersion = F2C2B23A1E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodel */;
+			path = TaskTracker_Offline.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F2C2B2271E53E8AA009F0245 /* Project object */;
+}
