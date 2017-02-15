@@ -14,6 +14,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     @IBOutlet weak var tableView: UITableView!
     
     var controller: NSFetchedResultsController<Task>!
+    var creating: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,18 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskCell
+        let task = controller.object(at: (indexPath as NSIndexPath) as IndexPath)
+        
+        cell.doneTapAction = { (self) in
+            cell.updateStatus(task: task)
+        }
+        cell.saveTapAction = { (self) in
+            cell.saveChanges(task: task)
+        }
+        cell.cancelTapAction = { (self) in
+            cell.cancelChanges(task: task)
+        }
+        
         configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
         return cell
     }
@@ -120,6 +133,27 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
                 }
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if let objs = controller.fetchedObjects, objs.count > 0 {
+            let task = objs[indexPath.row]
+            context.delete(task)
+            ad.saveContext()
+        }
+    }
+    
+    
+    @IBAction func addPressed(_ sender: UIBarButtonItem) {
+        if !creating {
+            let task = Task(context: context)
+            task.title=""
+            task.creating=true
+            task.details=""
+            task.done=false
+            ad.saveContext()
+        }
+
     }
     
     func initialData() {

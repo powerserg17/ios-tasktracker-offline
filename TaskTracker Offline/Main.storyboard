@@ -58,7 +58,10 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="hTs-VU-iUF" secondAttribute="height" multiplier="1:1" id="UNC-EL-yiL"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="8D939BEE-A2F8-47F0-ACE8-03FE1C9E3C8A"/>
+                                                    <state key="normal" title="Button" image="1E8D9F04-C197-466F-9333-5135E13F8B47"/>
+                                                    <connections>
+                                                        <action selector="donePressed:" destination="brN-7k-ukB" eventType="touchUpInside" id="sJ6-AT-nkO"/>
+                                                    </connections>
                                                 </button>
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-RH-v9x">
                                                     <rect key="frame" x="225" y="18" width="51" height="51"/>
@@ -66,6 +69,9 @@
                                                         <constraint firstAttribute="width" constant="51" id="w2L-Wi-AHb"/>
                                                     </constraints>
                                                     <state key="normal" title="OK"/>
+                                                    <connections>
+                                                        <action selector="savePressed:" destination="brN-7k-ukB" eventType="touchUpInside" id="YRu-66-QKC"/>
+                                                    </connections>
                                                 </button>
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQj-oI-R4w">
                                                     <rect key="frame" x="280" y="18" width="51" height="51"/>
@@ -74,6 +80,9 @@
                                                         <constraint firstAttribute="height" constant="51" id="yMn-Vw-q1n"/>
                                                     </constraints>
                                                     <state key="normal" title="Cancel"/>
+                                                    <connections>
+                                                        <action selector="cancelPressed:" destination="brN-7k-ukB" eventType="touchUpInside" id="eAk-Kc-7V5"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.10980392160000001" green="0.2156862745" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -118,7 +127,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks List" id="9Tg-dB-5ZD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4V0-ii-msU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4V0-ii-msU">
+                            <connections>
+                                <action selector="addPressed:" destination="BYZ-38-t0r" id="7Pf-XO-6hV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="vQF-Rs-bUS" id="loz-wD-ysK"/>
@@ -255,7 +268,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8D939BEE-A2F8-47F0-ACE8-03FE1C9E3C8A" width="497" height="497">
+        <image name="1E8D9F04-C197-466F-9333-5135E13F8B47" width="497" height="497">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
