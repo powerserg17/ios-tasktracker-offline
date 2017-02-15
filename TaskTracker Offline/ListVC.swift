@@ -105,6 +105,23 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objs = controller.fetchedObjects, objs.count > 0 {
+            let task = objs[indexPath.row]
+            performSegue(withIdentifier: "DetailsVC", sender: task)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailsVC" {
+            if let destination = segue.destination as? DetailsVC {
+                if let task = sender as? Task {
+                    destination.task = task
+                }
+            }
+        }
+    }
+    
     func initialData() {
         let task = Task(context: context)
         task.title="Wash dishes"

@@ -58,7 +58,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="hTs-VU-iUF" secondAttribute="height" multiplier="1:1" id="UNC-EL-yiL"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="E4A068F4-06FD-4DA9-8AE7-ACA4C4F7D338"/>
+                                                    <state key="normal" title="Button" image="8D939BEE-A2F8-47F0-ACE8-03FE1C9E3C8A"/>
                                                 </button>
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-RH-v9x">
                                                     <rect key="frame" x="225" y="18" width="51" height="51"/>
@@ -193,6 +193,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundedButton" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundedView" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveBtn:" destination="Oct-fG-cbr" eventType="touchUpInside" id="fl3-as-hcc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392160000001" green="0.2156862745" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -216,6 +219,11 @@
                             <constraint firstItem="tqh-XQ-DUo" firstAttribute="top" secondItem="skd-Ka-LZ9" secondAttribute="bottom" constant="40" id="yEZ-hR-pnp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailsField" destination="tao-xI-mql" id="wm3-Ms-IkC"/>
+                        <outlet property="doneSwitch" destination="ywn-da-8W7" id="w0t-kS-hVl"/>
+                        <outlet property="titleField" destination="skd-Ka-LZ9" id="p87-bE-ky2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBD-6e-jhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,7 +255,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="E4A068F4-06FD-4DA9-8AE7-ACA4C4F7D338" width="497" height="497">
+        <image name="8D939BEE-A2F8-47F0-ACE8-03FE1C9E3C8A" width="497" height="497">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
