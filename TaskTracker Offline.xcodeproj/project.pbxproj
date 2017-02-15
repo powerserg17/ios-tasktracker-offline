@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F26AA98C1E541D05009CF26F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26AA98B1E541D05009CF26F /* Main.storyboard */; };
 		F2C2B2331E53E8AB009F0245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B2321E53E8AB009F0245 /* AppDelegate.swift */; };
-		F2C2B2351E53E8AB009F0245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B2341E53E8AB009F0245 /* ViewController.swift */; };
-		F2C2B2381E53E8AB009F0245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C2B2361E53E8AB009F0245 /* Main.storyboard */; };
+		F2C2B2351E53E8AB009F0245 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B2341E53E8AB009F0245 /* ListVC.swift */; };
 		F2C2B23B1E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B2391E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodeld */; };
 		F2C2B23D1E53E8AB009F0245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C2B23C1E53E8AB009F0245 /* Assets.xcassets */; };
 		F2C2B2401E53E8AB009F0245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C2B23E1E53E8AB009F0245 /* LaunchScreen.storyboard */; };
+		F2C2B24B1E53EE0A009F0245 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B24A1E53EE0A009F0245 /* DetailsVC.swift */; };
+		F2C2B24D1E53EF23009F0245 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2B24C1E53EF23009F0245 /* TaskCell.swift */; };
+		F2E79F491E53F5D6001BAB8B /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E79F471E53F5D6001BAB8B /* Task+CoreDataClass.swift */; };
+		F2E79F4A1E53F5D6001BAB8B /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E79F481E53F5D6001BAB8B /* Task+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F26AA98B1E541D05009CF26F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F2C2B22F1E53E8AB009F0245 /* TaskTracker Offline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TaskTracker Offline.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C2B2321E53E8AB009F0245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2C2B2341E53E8AB009F0245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F2C2B2371E53E8AB009F0245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2C2B2341E53E8AB009F0245 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		F2C2B23A1E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskTracker_Offline.xcdatamodel; sourceTree = "<group>"; };
 		F2C2B23C1E53E8AB009F0245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2C2B23F1E53E8AB009F0245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2C2B2411E53E8AB009F0245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2C2B24A1E53EE0A009F0245 /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		F2C2B24C1E53EF23009F0245 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		F2E79F471E53F5D6001BAB8B /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "../Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2E79F481E53F5D6001BAB8B /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		F2C2B2311E53E8AB009F0245 /* TaskTracker Offline */ = {
 			isa = PBXGroup;
 			children = (
+				F2C2B2491E53EC48009F0245 /* Controller */,
+				F2C2B2481E53EC42009F0245 /* View */,
+				F2C2B2471E53EC37009F0245 /* Model */,
 				F2C2B2321E53E8AB009F0245 /* AppDelegate.swift */,
-				F2C2B2341E53E8AB009F0245 /* ViewController.swift */,
-				F2C2B2361E53E8AB009F0245 /* Main.storyboard */,
+				F26AA98B1E541D05009CF26F /* Main.storyboard */,
 				F2C2B23C1E53E8AB009F0245 /* Assets.xcassets */,
 				F2C2B23E1E53E8AB009F0245 /* LaunchScreen.storyboard */,
 				F2C2B2411E53E8AB009F0245 /* Info.plist */,
 				F2C2B2391E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodeld */,
 			);
 			path = "TaskTracker Offline";
+			sourceTree = "<group>";
+		};
+		F2C2B2471E53EC37009F0245 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2E79F471E53F5D6001BAB8B /* Task+CoreDataClass.swift */,
+				F2E79F481E53F5D6001BAB8B /* Task+CoreDataProperties.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F2C2B2481E53EC42009F0245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2C2B24C1E53EF23009F0245 /* TaskCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F2C2B2491E53EC48009F0245 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2C2B2341E53E8AB009F0245 /* ListVC.swift */,
+				F2C2B24A1E53EE0A009F0245 /* DetailsVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26AA98C1E541D05009CF26F /* Main.storyboard in Resources */,
 				F2C2B2401E53E8AB009F0245 /* LaunchScreen.storyboard in Resources */,
 				F2C2B23D1E53E8AB009F0245 /* Assets.xcassets in Resources */,
-				F2C2B2381E53E8AB009F0245 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,23 +176,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2C2B2351E53E8AB009F0245 /* ViewController.swift in Sources */,
+				F2C2B2351E53E8AB009F0245 /* ListVC.swift in Sources */,
+				F2C2B24B1E53EE0A009F0245 /* DetailsVC.swift in Sources */,
 				F2C2B2331E53E8AB009F0245 /* AppDelegate.swift in Sources */,
 				F2C2B23B1E53E8AB009F0245 /* TaskTracker_Offline.xcdatamodeld in Sources */,
+				F2E79F4A1E53F5D6001BAB8B /* Task+CoreDataProperties.swift in Sources */,
+				F2E79F491E53F5D6001BAB8B /* Task+CoreDataClass.swift in Sources */,
+				F2C2B24D1E53EF23009F0245 /* TaskCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F2C2B2361E53E8AB009F0245 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F2C2B2371E53E8AB009F0245 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F2C2B23E1E53E8AB009F0245 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -306,6 +338,7 @@
 				F2C2B2461E53E8AB009F0245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
