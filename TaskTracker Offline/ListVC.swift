@@ -49,9 +49,12 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
         cell.saveTapAction = { (self) in
             cell.saveChanges(task: task)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+            tableView.reloadData()
         }
         cell.cancelTapAction = { (self) in
             cell.cancelChanges(task: task)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
         }
         
         configureCell(cell: cell, indexPath: indexPath as NSIndexPath)

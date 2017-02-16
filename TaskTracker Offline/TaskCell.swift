@@ -77,6 +77,7 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
         task.creating=false
         task.title=addTextField.text!
         viewMode()
+        //configureCell(task: task)
         ad.saveContext()
     }
     
