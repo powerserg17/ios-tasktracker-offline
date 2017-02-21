@@ -1,18 +1,20 @@
 //
 //  TaskCell.swift
 //  TaskTracker Offline
-//
+//  300907406
 //  Created by Serhii Pianykh on 2017-02-14.
 //  Copyright © 2017 Serhii Pianykh. All rights reserved.
 //
-
+//  UITableViewCell class with implemented methods for cell control
 import UIKit
 
 class TaskCell: UITableViewCell, UITextFieldDelegate {
     
+    //checkbox images for button
     let imgChecked = UIImage(named: "checkbox-checked")
     let imgUnchecked = UIImage(named: "checkbox-unchecked")
     
+    //closures for cell actions
     var doneTapAction: ((UITableViewCell) -> Void)?
     var saveTapAction: ((UITableViewCell) -> Void)?
     var cancelTapAction: ((UITableViewCell) -> Void)?
@@ -24,6 +26,10 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var addTextField: UITextField!
     
+    //setting up cells with passed task parameters
+    //if in creating mode - show textfield and btns
+    //if not - show labels and done btn
+    //text crossed and faded if task is done
     func configureCell(task: Task) {
         if (task.creating) {
             creatingMode()
@@ -43,6 +49,7 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
         }
     }
     
+    //update task completion status
     func updateStatus(task: Task) {
         if task.done {
             task.done = false
@@ -53,6 +60,7 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
         ad.saveContext()
     }
     
+    //setting up creating mode
     func creatingMode() {
         titleLabel.isHidden = true
         doneBtn.isHidden = true
@@ -63,6 +71,7 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
         addTextField.becomeFirstResponder()
     }
     
+    //setting up view mode
     func viewMode() {
         titleLabel.isHidden = false
         doneBtn.isHidden = false
@@ -73,6 +82,7 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
         addTextField.resignFirstResponder()
     }
     
+    //saving changes for new task
     func saveChanges(task: Task) {
         task.creating=false
         task.title=addTextField.text!
@@ -81,6 +91,7 @@ class TaskCell: UITableViewCell, UITextFieldDelegate {
         ad.saveContext()
     }
     
+    //removing new task (canceling creation)
     func cancelChanges(task: Task) {
         context.delete(task)
         ad.saveContext()

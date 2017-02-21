@@ -1,10 +1,11 @@
 //
 //  ViewController.swift
 //  TaskTracker Offline
-//
+//  300907406
 //  Created by Serhii Pianykh on 2017-02-14.
 //  Copyright © 2017 Serhii Pianykh. All rights reserved.
 //
+//  ViewController with all tasks listed
 
 import UIKit
 import CoreData
@@ -16,6 +17,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     var controller: NSFetchedResultsController<Task>!
     var creating: Bool = false
     
+    //loading data
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +46,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskCell
         let task = controller.object(at: (indexPath as NSIndexPath) as IndexPath)
         
+        //defining actions for cell closures
         cell.doneTapAction = { (self) in
             cell.updateStatus(task: task)
         }
@@ -56,16 +59,19 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             cell.cancelChanges(task: task)
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
-        
+        //assigning task parameters to cell by passing cell and object position
         configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
         return cell
     }
     
+    //calling cell configure for cell
     func configureCell(cell: TaskCell, indexPath: NSIndexPath) {
         let task = controller.object(at: (indexPath as NSIndexPath) as IndexPath)
         cell.configureCell(task: task)
     }
     
+    //try fetching data from CoreData storage
+    //defining sort parameters
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
         
@@ -92,24 +98,29 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         tableView.endUpdates()
     }
     
+    //runs when object changed
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch(type) {
+            //inserting new row to tableview
         case .insert:
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .fade)
             }
             break
+            //deleting row from tableview
         case .delete:
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
             break
+            //updating cell
         case .move:
             if let indexPath = indexPath {
                 let cell = tableView.cellForRow(at: indexPath) as! TaskCell
                 configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
             }
             break
+            //updating cell (or changing position in case of changing sort)
         case .update:
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .fade)
@@ -121,6 +132,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
     }
     
+    //fetching task from array and performing segue
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let objs = controller.fetchedObjects, objs.count > 0 {
             let task = objs[indexPath.row]
@@ -128,6 +140,8 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
     }
     
+    //we have set up Task object as a sender in performSegue. here we check if it's so and sending Task object to next VC
+    //if some of cells were in creation mode (with textfield shown) - cell being deleted
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailsVC" {
             if let destination = segue.destination as? DetailsVC {
@@ -138,6 +152,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
     }
     
+    //swipe for delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if let objs = controller.fetchedObjects, objs.count > 0 {
             let task = objs[indexPath.row]
@@ -146,7 +161,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
     }
     
-    
+    //create new task. setting it to creation mode, so after table view updated textfield gonna be shown
     @IBAction func addPressed(_ sender: UIBarButtonItem) {
         if !creating {
             let task = Task(context: context)
@@ -159,6 +174,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
 
     }
     
+    //some test data
     func initialData() {
         let task = Task(context: context)
         task.title="Wash dishes"
